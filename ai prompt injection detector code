@@ -1,0 +1,21 @@
+import re
+
+# Define risky prompt patterns
+risky_patterns = [
+    r"ignore previous instructions",
+    r"reveal confidential",
+    r"override safety",
+    r"disable safety",
+    r"unfiltered response",
+    r"bypass restrictions"
+]
+
+def detect_injection(prompt):
+    for pattern in risky_patterns:
+        if re.search(pattern, prompt.lower()):
+            return "Suspicious prompt detected: contains '" + pattern + "'"
+    return "Safe prompt."
+
+# Example
+user_prompt = input("Enter your AI prompt: ")
+print(detect_injection(user_prompt))
