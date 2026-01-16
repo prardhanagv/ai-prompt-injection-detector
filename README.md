@@ -37,8 +37,8 @@ Support for multilingual prompt analysis.
 
 🧠 Author
 
-Created with ❤️ by [Your Name]
-(Replace with your GitHub username or handle)
+Created with ❤️ by Prardhana
+
 
 🪪 License
 
